@@ -43,22 +43,25 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 .nav-links a {
-    color: var(--color-text-muted);
-    text-decoration: none;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    transition: color 0.3s ease;
-}
-
-.nav-links a.active,
-.nav-links a:hover {
     color: var(--color-text-main);
+    text-decoration: none;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
 .nav-actions {
     display: flex;
     gap: 1.5rem;
@@ -97,8 +100,8 @@ body {
     position: absolute;
     font-family: var(--font-heading);
     font-size: 22rem;
-    font-weight: 400;
-    letter-spacing: 0.05em;
+    font-weight: 200;
+    letter-spacing: 0.12em;
     line-height: 1;
     color: rgba(255, 255, 255, 0.85);
     z-index: 2;
@@ -108,29 +111,41 @@ body {
 }
 
 /* Montanhas: camada mais próxima */
+
 .hero-mountains {
     position: absolute;
     inset: 0;
 
     background-image: url('assets/mountains-overlay.png');
-    background-size: 120rem auto;
+    background-size: 134rem auto;
+    transform: translateY(7rem);
+
     background-position: center bottom;
     background-repeat: no-repeat;
 
     z-index: 3;
     pointer-events: none;
+
     mix-blend-mode: darken;
     filter: contrast(1.1);
-}
 
+    transition: transform 0.2s ease-out;
+    will-change: transform;
+}
 /* Conteúdo em primeiro plano */
 .hero-content {
     position: absolute;
     left: 4rem;
     z-index: 10;
-    max-width: 320px;
+    max-width: 350px;
 }
 
+
+.hero-content p {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.78);
+}
 .subtitle {
     display: block;
     font-size: 0.85rem;
@@ -163,10 +178,11 @@ body {
     bottom: 2.5rem;
     left: 4rem;
     right: 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .slider-pagination {
@@ -189,6 +205,9 @@ body {
     height: 24px;
     background-color: rgba(255, 255, 255, 0.5);
 }
+
+
+
 /* Menu mobile */
 @media (max-width: 760px) {
     .navbar {
