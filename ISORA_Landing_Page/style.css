@@ -117,7 +117,7 @@ body {
     inset: 0;
 
     background-image: url('assets/mountains-overlay.png');
-    background-size: 134rem auto;
+    background-size: 125rem auto;
     transform: translateY(7rem);
 
     background-position: center bottom;
