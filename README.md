@@ -6,9 +6,6 @@ Landing page conceitual inspirada nas paisagens da Islândia.
 
 [**Visitar ISORA**](https://discover-isora.netlify.app/)
 
-## 🖥️ Preview
-
-![ISORA Landing Page](ISORA_Landing_Page/assets/preview.png)
 
 ## 🛠️ Tecnologias
 
