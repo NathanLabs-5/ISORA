@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISORA — Iceland</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="#" class="logo">ISORA</a>
+        <nav class="nav-links" id="navigation">
+            <a href="#" class="active">DISCOVER</a>
+            <a href="#">DESTINATIONS</a>
+            <a href="#">EXPERIENCES</a>
+            <a href="#">ABOUT</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="icon-btn" aria-label="Search" id="menuToggle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+            <button class="icon-btn" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="8" x2="21" y2="8"></line><line x1="3" y1="16" x2="21" y2="16"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Seção Hero com efeito de profundidade (3 Camadas) -->
+    <main class="hero">
+        <!-- Camada 1: Fundo com o Céu e Montanhas Distantes -->
+        <div class="hero-bg"></div>
+
+        <!-- Camada 2: Texto Gigante (fica no meio) -->
+        <h1 class="hero-title">ISORA</h1>
+
+        <!-- Camada 3: Recorte Transparente das Montanhas da Frente (fica por cima do texto) -->
+        <div class="hero-mountains"></div>
+
+        <!-- Conteúdo Sobreposto (Texto lateral) -->
+        <div class="hero-content">
+            <span class="subtitle">ICELAND</span>
+            <p class="description">
+                A land of fire and ice, where nature writes the most extraordinary stories.
+            </p>
+            <a href="#" class="btn-discover">
+                DISCOVER <span>→</span>
+            </a>
+        </div>
+
+        <!-- Rodapé do Hero -->
+        <footer class="hero-footer">
+            <div class="slider-pagination">
+                <span class="page-num active">01</span>
+                <span class="page-num">02</span>
+                <span class="page-num">03</span>
+            </div>
+            <div class="scroll-indicator"></div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

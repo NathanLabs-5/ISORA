@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-heading: 'Raleway', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+
+    --color-text-main: #ffffff;
+    --color-text-muted: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    background-color: #0b1117;
+    color: var(--color-text-main);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+/* Header */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    z-index: 10;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+    color: var(--color-text-main);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-links a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: var(--color-text-main);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-main);
+    cursor: pointer;
+}
+
+/* Container do Hero */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+/* Camada 1: Imagem de Fundo */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/isora-iceland-hero.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    transform: scale(1);
+}
+/* Camada 2: O Texto (Entre o Fundo e a Montanha) */
+.hero-title {
+    position: absolute;
+    font-family: var(--font-heading);
+    font-size: 22rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.85);
+    z-index: 2;
+    top: 8rem;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+/* Montanhas: camada mais próxima */
+.hero-mountains {
+    position: absolute;
+    inset: 0;
+
+    background-image: url('assets/mountains-overlay.png');
+    background-size: 120rem auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    z-index: 3;
+    pointer-events: none;
+    mix-blend-mode: darken;
+    filter: contrast(1.1);
+}
+
+/* Conteúdo em primeiro plano */
+.hero-content {
+    position: absolute;
+    left: 4rem;
+    z-index: 10;
+    max-width: 320px;
+}
+
+.subtitle {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 0.35em;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+.btn-discover {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--color-text-main);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 0.4rem;
+}
+
+/* Footer do Hero */
+.hero-footer {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 4rem;
+    right: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.slider-pagination {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.page-num {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.page-num.active {
+    color: var(--color-text-main);
+}
+
+.scroll-indicator {
+    width: 1px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* Menu mobile */
+@media (max-width: 760px) {
+    .navbar {
+        padding: 1.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 1.5rem;
+        right: 1.5rem;
+        padding: 1.5rem;
+        background: rgba(11, 17, 23, 0.95);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
